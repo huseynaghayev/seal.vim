@@ -33,3 +33,5 @@ highlight def link sealBuiltin Function
 
 
 setlocal formatoptions+=cro
+
+syntax sync minlines=100
