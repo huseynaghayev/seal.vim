@@ -13,6 +13,7 @@ syntax match sealNumber /\<0x\x\+\>/
 
 syntax match sealString /"\([^"\\]\|\\.\)*"/
 syntax match sealString /'\([^'\\]\|\\.\)*'/
+syntax region sealMultiString start="`" end="`"
 syntax match sealEscape /\\./ containedin=sealString
 
 syntax match sealComment "//.*"
@@ -25,6 +26,7 @@ highlight def link sealKeyword Keyword
 highlight def link sealBoolean Boolean
 highlight def link sealNumber Number
 highlight def link sealString String
+highlight def link sealMultiString String
 highlight def link sealEscape Special
 highlight def link sealComment Comment
 highlight def link sealBuiltin Function
